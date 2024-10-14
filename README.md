@@ -1,7 +1,7 @@
 # Automation Scripting
 This is a simple project on automation scripting for testing purposes using Java Selenium.
 
-I actually utilize Katalon Studio even more, but I figured that creating this project would help me enhance my skills on scripting with Java since Katalon Studio is mostly "codeless" due to its web recording feature.
+I actually utilize Katalon Studio at work even more, but I figured that creating this project would help me enhance my skills on scripting with Java since Katalon Studio is mostly "codeless" due to its web recording feature.
 
 
 ## How It's Made:
