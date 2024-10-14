@@ -20,21 +20,19 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.apache.logging.log4j.*;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.slf4j.*;
+//import org.apache.logging.slf4j.*;
 
 /**
  * 
  */
+@Test
 public class TC01_VerifyInvalidLogin {
-
 	/**
 	 * @param args
 	 * @throws IOException 
 	 */
 
-	
-	@Test
-	public static void main(String[] args) throws InterruptedException, IOException { 
+	public void VerifyInvalidLogin() throws InterruptedException, IOException { 
 		// TODO Auto-generated method stub
 		
 		// Variables here
@@ -76,22 +74,14 @@ public class TC01_VerifyInvalidLogin {
 
 		// Maximize current window
 		driver.manage().window().maximize();
-		function.delayPage();
 		
 		// Click on Login button on page
 		login.clickOnLogin();
-
-		// Test message here when switching screen
-		function.delayPage();
-			
 		
 		// Login using existing email and password
-		login.setEmail(props.getProperty("email"));
-		function.delayStep();
-		login.setPassword(props.getProperty("password"));
-		function.delayStep();
+		login.setInvalidEmail();
+		login.setInvalidPassword();
 		login.clickLoginButton();
-		function.delayPage();
 
 		// Close window
 		driver.close();

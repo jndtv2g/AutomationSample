@@ -26,7 +26,7 @@ import org.apache.logging.slf4j.*;
  * 
  */
 public class TC02_VerifyValidLogin {
-
+@BeforeTest
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -34,7 +34,7 @@ public class TC02_VerifyValidLogin {
 
 	
 	@Test
-	public static void main(String[] args) throws InterruptedException, IOException { 
+	public  void VerifyValidLogin() throws InterruptedException, IOException { 
 		// TODO Auto-generated method stub
 		
 		// Variables here
@@ -86,15 +86,12 @@ public class TC02_VerifyValidLogin {
 			
 		
 		// Login using existing email and password
-		login.setEmail(props.getProperty("validEmail"));
-		function.delayStep();
-		login.setPassword(props.getProperty("validPassword"));
-		function.delayStep();
+		login.setValidEmail();
+		login.setValidPassword();
 		login.clickLoginButton();
-		function.delayPage();
 
 		// Close window
-		//driver.close();
+		driver.close();
 		
 		
 	}

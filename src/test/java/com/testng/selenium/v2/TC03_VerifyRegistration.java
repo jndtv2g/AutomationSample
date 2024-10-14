@@ -26,7 +26,7 @@ import org.apache.logging.slf4j.*;
  * 
  */
 public class TC03_VerifyRegistration {
-
+@BeforeTest
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -34,7 +34,7 @@ public class TC03_VerifyRegistration {
 
 	
 	@Test
-	public static void main(String[] args) throws InterruptedException, IOException { 
+	public void VerifyRegistration() throws InterruptedException, IOException { 
 		// TODO Auto-generated method stub
 		
 		// Variables here
@@ -120,7 +120,7 @@ public class TC03_VerifyRegistration {
 		register.clickCreateAccBtn();
 		
 		// Close window
-		//driver.close();
+		driver.close();
 		
 		
 	}
